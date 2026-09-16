@@ -239,3 +239,8 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:22px;pa
   .engagements-heading{display:block}
   .engagements-heading h4{margin-top:10px}
 }
+.home .hero h1 {
+  font-size: clamp(2.6rem, 3.5vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
