@@ -21,10 +21,23 @@ main{overflow:hidden}.hero{min-height:690px;display:grid;grid-template-columns:m
 .service-crm .engagements{margin-top:-42px;padding-top:24px}
 @media (max-width:640px){.service-crm .engagements{margin-top:0;padding-top:28px}}
 .home .services{display:none}.page-crm .hero,.page-change .hero,.page-loyalty .hero,.page-crm .outcomes,.page-change .outcomes,.page-loyalty .outcomes{display:none}.page-crm .services> .section-heading,.page-change .services> .section-heading,.page-loyalty .services> .section-heading{display:none}.page-crm .service:not(.service-crm),.page-change .service:not(.service-change),.page-loyalty .service:not(.service-loyalty){display:none}.page-crm .services,.page-change .services,.page-loyalty .services{padding-top:72px}.page-crm .service-crm,.page-change .service-change,.page-loyalty .service-loyalty{border-top:0}.page-crm .site-header nav a:nth-child(2),.page-change .site-header nav a:nth-child(3),.page-loyalty .site-header nav a:nth-child(4){color:var(--purple)}
+/* Rounded artwork */
 .hero-visual > img,
 .service-art,
-.change-art > img:first-child,
-.feedback-loop > img {
+.change-art > img:first-child {
   border-radius: 20px;
   box-shadow: 0 18px 45px rgba(36, 42, 107, 0.14);
+}
+
+/* Larger homepage artwork without blank space */
+.hero-visual {
+  aspect-ratio: auto;
+  max-width: 620px;
+  width: 100%;
+}
+
+.hero-visual > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
