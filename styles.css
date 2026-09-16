@@ -244,3 +244,53 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:22px;pa
   line-height: 1.08;
   letter-spacing: -0.04em;
 }
+/* Remove service page numbers and reclaim their space */
+.page-crm .service-number,
+.page-change .service-number,
+.page-loyalty .service-number {
+  display: none;
+}
+
+/* Desktop layouts */
+.page-change .service-change,
+.page-loyalty .service-loyalty {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.62fr);
+}
+
+.page-crm .service-crm {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.58fr);
+  grid-template-areas:
+    "copy art"
+    "copy proof";
+}
+
+.page-crm .service-crm .engagements {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+/* Tablet and mobile layouts */
+@media (max-width: 1000px) {
+  .page-change .service-change,
+  .page-loyalty .service-loyalty {
+    grid-template-columns: 1fr;
+  }
+
+  .page-change .service-change > :last-child,
+  .page-loyalty .service-loyalty > :last-child {
+    grid-column: 1;
+  }
+
+  .page-crm .service-crm {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "art"
+      "proof";
+  }
+
+  .page-crm .service-crm .engagements {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
