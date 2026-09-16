@@ -32,7 +32,7 @@ main{overflow:hidden}.hero{min-height:690px;display:grid;grid-template-columns:m
 .hero-visual {
   width: 100%;
   max-width: 620px;
-  aspect-ratio: 2.45 / 1;
+  height: 310px;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 18px 45px rgba(36, 42, 107, 0.14);
@@ -41,5 +41,11 @@ main{overflow:hidden}.hero{min-height:690px;display:grid;grid-template-columns:m
 .hero-visual > img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.home .hero {
+  min-height: auto;
 }
